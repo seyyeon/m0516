@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 이미지</title>
+    <style>
+        *{box-sizing: border-box;}
+        /* 자식 */
+        .box{
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+        /* 부모 */
+        .container::after{
+            content: '';
+            clear: both;
+            display: block;
+
+        }
+
+        @media screen and (max-width: 500px) {
+            /* 자식 모바일 버전일때 모습 */
+        .box{
+            width: 100%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <h3>이미지 반응하는 효과</h3>
+    <p>한번 따라해보세요</p>
+    <div class="container">
+        <div class="box">
+            <img src="img/img.jpg" style="width: 100%" alt="배경1">
+            </div>
+            <div class="box">
+            <img src="img/img2.jpg" style="width: 100%" alt="배경2">
+            </div>
+            <div class="box">
+            <img src="img/img3.jpg" style="width: 100%" alt="배경3">
+            </div>
+
+
+    </div>
+</body>
+</html>
